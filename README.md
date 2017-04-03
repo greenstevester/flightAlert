@@ -1,8 +1,8 @@
 # FlightAlert #
 
 Demonstrates a small example of Spring Boot/Spring Data/Angular 1.x Monolith built using the JHipster framework (https://jhipster.github.io/) which has everything you need!
-It notifies you per email when a desired flight Business class fares from Milan Airport. It uses the google flights API (https://www.google.ch/flights/) to 
-source the flights.
+It notifies you per email when a desired flight, i.e. Business class fares from Milan Airport are within a certain price range for your selected dates and carriers. The application is very rudimentary, but demonstrates a full-stack dev and cloud deployment for a simple business use case.
+NOTE: It uses the google flights API (https://www.google.ch/flights/) to source the flights. 
 
 see https://developers.google.com/qpx-express/v1/trips/search
 see http://ourairports.com/data/
