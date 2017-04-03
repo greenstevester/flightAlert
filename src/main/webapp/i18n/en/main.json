@@ -1,0 +1,19 @@
+{
+    "main": {
+        "title": "Welcome to FlightAlert",
+        "subtitle": "This very simple application allows you to get email alerts of business class flights from Milan Airport",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "If you have any question on FlightAlert:",
+        "link": {
+            "homepage": "FlightAlert homepage",
+            "stackoverflow": "FlightAlert on Stack Overflow",
+            "bugtracker": "FlightAlert bug tracker",
+            "chat": "FlightAlert public chat room",
+            "contact": "contact @FlightAlert on Twitter"
+        },
+        "like": "If you like FlightAlert, don't forget to give us a star on",
+        "github": "Github"
+    }
+}

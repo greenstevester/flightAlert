@@ -1,0 +1,19 @@
+{
+    "main": {
+        "title": "Bienvenue, FlightAlert !",
+        "subtitle": "Ceci est votre page d'accueil",
+        "logged": {
+            "message": "Vous êtes connecté en tant que \"{{username}}\"."
+        },
+        "question": "Si vous avez des questions à propos de FlightAlert:",
+        "link": {
+            "homepage": "Page d'accueil de JHipster",
+            "stackoverflow": "FlightAlert sur Stack Overflow",
+            "bugtracker": "FlightAlert bug tracker",
+            "chat": "FlightAlert public chat room",
+            "contact": "Contactez-nous sur Twitter @FlightAlert"
+        },
+        "like": "Si vous aimez FlightAlert, donnez nous une étoile sur",
+        "github": "Github"
+    }
+}

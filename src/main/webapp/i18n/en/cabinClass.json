@@ -1,0 +1,11 @@
+{
+    "flightalertApp": {
+        "CabinClass" : {
+            "null": "",
+            "COACH": "COACH",
+            "PREMIUM_COACH": "PREMIUM_COACH",
+            "BUSINESS": "BUSINESS",
+            "FIRST": "FIRST"
+        }
+    }
+}

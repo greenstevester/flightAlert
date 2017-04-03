@@ -1,0 +1,28 @@
+{
+    "flightalertApp": {
+        "CarrierCode" : {
+            "null": "",
+            "LX": "LX",
+            "LH": "LH",
+            "AF": "AF",
+            "AC": "AC",
+            "AY": "AY",
+            "AZ": "AZ",
+            "BA": "BA",
+            "CX": "CX",
+            "EK": "EK",
+            "IB": "IB",
+            "JL": "JL",
+            "LO": "LO",
+            "NZ": "NZ",
+            "QF": "QF",
+            "SK": "SK",
+            "SQ": "SQ",
+            "TG": "TG",
+            "TP": "TP",
+            "UA": "UA",
+            "VS": "VS",
+            "TK": "TK"
+        }
+    }
+}

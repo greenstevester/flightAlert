@@ -1,0 +1,64 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myPermittedCarrierLabel" translate="flightalertApp.permittedCarrier.home.createOrEditLabel">Create or edit a PermittedCarrier</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="permittedCarrier.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.permittedCarrier.carrierCode" for="field_carrierCode">CarrierCode</label>
+            <select class="form-control" name="carrierCode" ng-model="permittedCarrier.carrierCode" id="field_carrierCode" required>
+                <option value="LX" translate="flightalertApp.CarrierCode.LX">LX</option>
+                <option value="LH" translate="flightalertApp.CarrierCode.LH">LH</option>
+                <option value="AF" translate="flightalertApp.CarrierCode.AF">AF</option>
+                <option value="AC" translate="flightalertApp.CarrierCode.AC">AC</option>
+                <option value="AY" translate="flightalertApp.CarrierCode.AY">AY</option>
+                <option value="AZ" translate="flightalertApp.CarrierCode.AZ">AZ</option>
+                <option value="BA" translate="flightalertApp.CarrierCode.BA">BA</option>
+                <option value="CX" translate="flightalertApp.CarrierCode.CX">CX</option>
+                <option value="EK" translate="flightalertApp.CarrierCode.EK">EK</option>
+                <option value="IB" translate="flightalertApp.CarrierCode.IB">IB</option>
+                <option value="JL" translate="flightalertApp.CarrierCode.JL">JL</option>
+                <option value="LO" translate="flightalertApp.CarrierCode.LO">LO</option>
+                <option value="NZ" translate="flightalertApp.CarrierCode.NZ">NZ</option>
+                <option value="QF" translate="flightalertApp.CarrierCode.QF">QF</option>
+                <option value="SK" translate="flightalertApp.CarrierCode.SK">SK</option>
+                <option value="SQ" translate="flightalertApp.CarrierCode.SQ">SQ</option>
+                <option value="TG" translate="flightalertApp.CarrierCode.TG">TG</option>
+                <option value="TP" translate="flightalertApp.CarrierCode.TP">TP</option>
+                <option value="UA" translate="flightalertApp.CarrierCode.UA">UA</option>
+                <option value="VS" translate="flightalertApp.CarrierCode.VS">VS</option>
+                <option value="TK" translate="flightalertApp.CarrierCode.TK">TK</option>
+            </select>
+            <div ng-show="editForm.carrierCode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.carrierCode.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="flightalertApp.permittedCarrier.flightSlice" for="field_flightSlice">flightSlice</label>
+            <select class="form-control" id="field_flightSlice" name="flightSlice" ng-model="permittedCarrier.flightSlice" ng-options="flightSlice as flightSlice.id for flightSlice in flightslices track by flightSlice.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

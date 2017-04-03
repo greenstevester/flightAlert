@@ -1,0 +1,33 @@
+{
+    "flightalertApp": {
+        "flightSlice" : {
+            "home": {
+                "title": "FlightSlices",
+                "createLabel": "Créer un nouveau FlightSlice",
+                "createOrEditLabel": "Créer ou éditer un FlightSlice",
+                "search": "Search for FlightSlice"
+            },
+            "created": "Un nouveau FlightSlice a été créé avec l'identifiant {{ param }}",
+            "updated": "Le FlightSlice avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le FlightSlice avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le FlightSlice {{ id }} ?"
+            },
+            "detail": {
+                "title": "FlightSlice"
+            },
+            "origin": "Origin",
+            "destination": "Destination",
+            "preferredCabin": "PreferredCabin",
+            "date": "Date",
+            "maxStops": "MaxStops",
+            "maxConnectionDurationInMinutes": "MaxConnectionDurationInMinutes",
+            "maxPriceInCHF": "MaxPriceInCHF",
+            "refundable": "Refundable",
+            "permittedCarrier": "PermittedCarrier",
+            "passenger": "Passenger",
+            "flightRequest": "FlightRequest"
+        }
+    }
+}
+

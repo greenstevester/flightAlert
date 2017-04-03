@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "flightAlert",
+    "packageName": "net.greensill.flightalert",
+    "packageFolder": "net/greensill/flightalert",
+    "authenticationType": "session",
+    "hibernateCache": "hazelcast",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": true,
+    "rememberMeKey": "2498bb16a9f1df83594c2c1d3a9bf3aa8aca707e",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.flightrequestresult.title}">title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{email.flightrequestresult.greeting(${user.firstName})}">
+            Dear
+        </p>
+        <p th:text="#{email.flightrequestresult.text1}">
+            Your Flight Request has been processed.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Price</th>
+                <th>Total Flying time</th>
+                <th>Carrier</th>
+                <th>duration</th>
+                <th>stopDuration</th>
+                <th>bookingCode</th>
+                <th>flightNumber</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="result : ${flightResults}">
+                <td th:text="${result.from}">from</td>
+                <td th:text="${result.price}">0.99</td>
+                <td>TODO</td>
+                <td th:text="${result.carrier}">carrier</td>
+                <td th:text="${result.duration}">duration</td>
+                <td th:text="${result.stopDuration}">stopDuration</td>
+                <td th:text="${result.bookingCode}">bookingCode</td>
+                <td th:text="${result.flightNumber}">flightNumber</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+        <p>
+            <span th:text="#{email.flightrequestresult.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">FlightAlert Team.</em>
+        </p>
+    </body>
+</html>

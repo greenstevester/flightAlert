@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00001_create_FlightRequest.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00002_create_FlightSlice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00003_create_Passenger.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00004_create_PermittedCarrier.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00005_update_FlightRequest_and_ass_tables.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00006_update_FlightRequest_tables.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00007_update_FlightRequest_tables.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+</databaseChangeLog>

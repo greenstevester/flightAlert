@@ -1,0 +1,17 @@
+---
+# this is a cloudfoundry manifest, please see http://docs.run.pivotal.io/devguide/deploy-apps/manifest.html#find-manifest
+# all applications use these settings and services
+domain: cfapps.io
+instances: 1
+buildpack: https://github.com/cloudfoundry/java-buildpack
+services:
+    - cleardb-msql-<yourdbname>
+    - <your send grid service name>
+applications:
+- name: flightalert
+  host: flightalert
+  path: ../../target/flightalert-0.0.1-SNAPSHOT.war
+  env:
+    JAVA_OPTS: -Dspring.main.show_banner=false -Dspring.output.ansi.enabled=always
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_OPEN_JDK_JRE: "{memory_calculator: {memory_sizes: {metaspace: 128M }}}"

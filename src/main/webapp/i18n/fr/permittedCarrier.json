@@ -1,0 +1,24 @@
+{
+    "flightalertApp": {
+        "permittedCarrier" : {
+            "home": {
+                "title": "PermittedCarriers",
+                "createLabel": "Créer un nouveau PermittedCarrier",
+                "createOrEditLabel": "Créer ou éditer un PermittedCarrier",
+                "search": "Search for PermittedCarrier"
+            },
+            "created": "Un nouveau PermittedCarrier a été créé avec l'identifiant {{ param }}",
+            "updated": "Le PermittedCarrier avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le PermittedCarrier avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le PermittedCarrier {{ id }} ?"
+            },
+            "detail": {
+                "title": "PermittedCarrier"
+            },
+            "carrierCode": "CarrierCode",
+            "flightSlice": "FlightSlice"
+        }
+    }
+}
+

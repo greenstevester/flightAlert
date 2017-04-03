@@ -1,0 +1,10 @@
+{
+    "flightalertApp": {
+        "PassengerType" : {
+            "null": "",
+            "ADULT": "ADULT",
+            "CHILD": "CHILD",
+            "SENIOR": "SENIOR"
+        }
+    }
+}

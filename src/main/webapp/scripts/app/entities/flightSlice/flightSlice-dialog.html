@@ -1,0 +1,157 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFlightSliceLabel" translate="flightalertApp.flightSlice.home.createOrEditLabel">Create or edit a FlightSlice</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="flightSlice.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.origin" for="field_origin">Origin</label>
+            <input type="text" class="form-control" name="origin" id="field_origin"
+                    ng-model="flightSlice.origin"
+                    required ng-maxlength="3" />
+            <div ng-show="editForm.origin.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.origin.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.origin.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="3">
+                    This field cannot be longer than 3 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.destination" for="field_destination">Destination</label>
+            <input type="text" class="form-control" name="destination" id="field_destination"
+                    ng-model="flightSlice.destination"
+                    required ng-maxlength="3" />
+            <div ng-show="editForm.destination.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.destination.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.destination.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="3">
+                    This field cannot be longer than 3 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.preferredCabin" for="field_preferredCabin">PreferredCabin</label>
+            <select class="form-control" name="preferredCabin" ng-model="flightSlice.preferredCabin" id="field_preferredCabin">
+                <option value="COACH" translate="flightalertApp.CabinClass.COACH">COACH</option>
+                <option value="PREMIUM_COACH" translate="flightalertApp.CabinClass.PREMIUM_COACH">PREMIUM_COACH</option>
+                <option value="BUSINESS" translate="flightalertApp.CabinClass.BUSINESS">BUSINESS</option>
+                <option value="FIRST" translate="flightalertApp.CabinClass.FIRST">FIRST</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.date" for="field_date">Date</label>
+            <input id="field_date" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="flightSlice.date" is-open="datePickerForDate.status.opened"
+            required/>
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+            <div ng-show="editForm.date.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.date.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.date.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.maxStops" for="field_maxStops">MaxStops</label>
+            <input type="number" class="form-control" name="maxStops" id="field_maxStops"
+                    ng-model="flightSlice.maxStops"
+                    min="1" max="99999" />
+            <div ng-show="editForm.maxStops.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.maxStops.$error.min" translate="entity.validation.min" translate-value-min="1">
+                    This field should be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxStops.$error.max" translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxStops.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.maxConnectionDurationInMinutes" for="field_maxConnectionDurationInMinutes">MaxConnectionDurationInMinutes</label>
+            <input type="number" class="form-control" name="maxConnectionDurationInMinutes" id="field_maxConnectionDurationInMinutes"
+                    ng-model="flightSlice.maxConnectionDurationInMinutes"
+                    min="1" max="99999" />
+            <div ng-show="editForm.maxConnectionDurationInMinutes.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.maxConnectionDurationInMinutes.$error.min" translate="entity.validation.min" translate-value-min="1">
+                    This field should be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxConnectionDurationInMinutes.$error.max" translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxConnectionDurationInMinutes.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.maxPriceInCHF" for="field_maxPriceInCHF">MaxPriceInCHF</label>
+            <input type="number" class="form-control" name="maxPriceInCHF" id="field_maxPriceInCHF"
+                    ng-model="flightSlice.maxPriceInCHF"
+                    min="1" max="99999" />
+            <div ng-show="editForm.maxPriceInCHF.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.maxPriceInCHF.$error.min" translate="entity.validation.min" translate-value-min="1">
+                    This field should be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxPriceInCHF.$error.max" translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.maxPriceInCHF.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="flightalertApp.flightSlice.refundable" for="field_refundable">Refundable</label>
+            <input type="checkbox" class="form-control" name="refundable" id="field_refundable"
+                    ng-model="flightSlice.refundable"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="flightalertApp.flightSlice.flightRequest" for="field_flightRequest">flightRequest</label>
+            <select class="form-control" id="field_flightRequest" name="flightRequest" ng-model="flightSlice.flightRequest" ng-options="flightRequest as flightRequest.id for flightRequest in flightrequests track by flightRequest.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

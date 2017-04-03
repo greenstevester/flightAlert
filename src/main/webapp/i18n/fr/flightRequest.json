@@ -1,0 +1,25 @@
+{
+    "flightalertApp": {
+        "flightRequest" : {
+            "home": {
+                "title": "FlightRequests",
+                "createLabel": "Créer un nouveau FlightRequest",
+                "createOrEditLabel": "Créer ou éditer un FlightRequest",
+                "search": "Search for FlightRequest"
+            },
+            "created": "Un nouveau FlightRequest a été créé avec l'identifiant {{ param }}",
+            "updated": "Le FlightRequest avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le FlightRequest avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le FlightRequest {{ id }} ?"
+            },
+            "detail": {
+                "title": "FlightRequest"
+            },
+            "validFromDate": "ValidFromDate",
+            "validToDate": "ValidToDate",
+            "leg": "Leg"
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+
+enum CabinClass {
+    COACH, PREMIUM_COACH, BUSINESS, FIRST
+}
+
+enum CarrierCode {
+    LX, LH, AF, AC, AY, AZ, BA, CX, EK, IB, JL, LO, NZ, QF, SK, SQ, TG, TP, UA, VS, TK
+}
+
+enum PassengerType {
+    ADULT, CHILD, SENIOR
+}
+
+entity PermittedCarrier {
+    carrierCode CarrierCode required
+}
+
+entity Passenger {
+    passengerType PassengerType required
+}
+
+
+entity FlightSlice {
+    origin String required maxlength(3),
+    destination String required maxlength(3),
+    preferredCabin CabinClass,
+    date ZonedDateTime required,
+    maxStops Integer min(0) max(99999),
+    maxConnectionDurationInMinutes Integer min(1) max(99999),
+    maxPriceInCHF BigDecimal min(1) max(99999),
+    refundable Boolean,
+}
+
+relationship OneToMany {
+  FlightSlice{permittedCarrier} to PermittedCarrier{flightSlice}
+}
+
+relationship OneToMany {
+  FlightSlice{passenger} to Passenger{flightSlice}
+}
+
+entity FlightRequest {
+  userId Long,
+  validFromDate ZonedDateTime required,
+  validToDate ZonedDateTime required
+}
+
+relationship OneToMany {
+  FlightRequest{leg} to FlightSlice{flightRequest}
+}
+
+paginate FlightRequest, FlightSlice with infinite-scroll
+
+service FlightRequest with serviceClass
